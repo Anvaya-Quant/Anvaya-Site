@@ -1,0 +1,397 @@
+---
+---
+
+<section class="section cta-section" id="waitlist">
+  <div class="container">
+
+    <div class="cta__wrapper">
+
+      <!-- Background logo mark -->
+      <div class="cta__bg-mark" aria-hidden="true">
+        <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="130" cy="150" rx="100" ry="62" stroke="#B4B9C1" stroke-width="1.5" fill="none" transform="rotate(-15 130 150)" opacity="0.08"/>
+          <ellipse cx="170" cy="150" rx="100" ry="62" stroke="#B4B9C1" stroke-width="1.5" fill="none" transform="rotate(15 170 150)" opacity="0.08"/>
+          <path d="M150 80L186 220H160L150 170L140 220H114L150 80Z" fill="#0E3B8C" opacity="0.15"/>
+          <line x1="125" y1="185" x2="175" y2="185" stroke="#0E3B8C" stroke-width="5" stroke-linecap="round" opacity="0.15"/>
+        </svg>
+      </div>
+
+      <div class="cta__content">
+        <div class="section-label" style="justify-content:center;">Early Access Program</div>
+
+        <h2 class="cta__headline">
+          Be First to Build<br/>
+          <span class="gradient-text">on the Quantum Stack.</span>
+        </h2>
+
+        <p class="cta__sub">
+          We're opening early access to a select group of quantum researchers,
+          developers, and infrastructure engineers. Get priority access to all
+          three tiers of the Anvaya Hybrid Stack.
+        </p>
+
+        <!-- Form -->
+        <form class="cta__form" id="waitlistForm" novalidate>
+          <div class="cta__form-group">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your name"
+              class="cta__input"
+              autocomplete="name"
+            />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Work email"
+              class="cta__input"
+              autocomplete="email"
+              required
+            />
+          </div>
+          <div class="cta__form-group">
+            <select name="role" class="cta__input cta__select">
+              <option value="" disabled selected>Your role</option>
+              <option value="quantum-researcher">Quantum Researcher</option>
+              <option value="software-engineer">Software Engineer</option>
+              <option value="hardware-engineer">Hardware Engineer</option>
+              <option value="phd-student">PhD Student</option>
+              <option value="enterprise">Enterprise / Institution</option>
+              <option value="investor">Investor</option>
+              <option value="other">Other</option>
+            </select>
+            <select name="interest" class="cta__input cta__select">
+              <option value="" disabled selected>Primary interest</option>
+              <option value="studio">ANVAYA Studio (UI/IDE)</option>
+              <option value="core">ANVAYA Core (Compiler/Sim)</option>
+              <option value="pulse">ANVAYA Pulse (Bare Metal)</option>
+              <option value="full-stack">Full Stack Platform</option>
+            </select>
+          </div>
+          <button type="submit" class="cta__submit btn btn--primary btn--lg">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M8 1L15 8L8 15M15 8H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Join the Waitlist
+          </button>
+          <p class="cta__note">No spam. No noise. Just early access when we're ready.</p>
+        </form>
+
+        <!-- Success message -->
+        <div class="cta__success" id="successMsg" hidden>
+          <div class="cta__success-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="10" stroke="#1a52c4" stroke-width="1.5"/>
+              <path d="M8 12l3 3 5-5" stroke="#1a52c4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <h4>You're on the list.</h4>
+            <p>We'll reach out when early access opens. Welcome to the quantum era.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Side info -->
+      <div class="cta__side">
+        <div class="cta__access-card">
+          <h4 class="cta__access-title">Early Access Includes</h4>
+          <ul class="cta__access-list">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-6" stroke="#1a52c4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              ANVAYA Studio beta access
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-6" stroke="#1a52c4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Core SDK (Rust crate + Wasm pkg)
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-6" stroke="#1a52c4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Pulse API documentation
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-6" stroke="#1a52c4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Private Discord community
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-6" stroke="#1a52c4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Roadmap input & co-design sessions
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-6" stroke="#1a52c4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Founding user pricing lock-in
+            </li>
+          </ul>
+        </div>
+
+        <div class="cta__trust">
+          <p class="mono" style="font-size:0.65rem; letter-spacing:0.15em; color:var(--muted-grey); margin-bottom:0.75rem;">BUILT WITH</p>
+          <div class="cta__tech-logos">
+            <span class="tech-badge mono">Rust</span>
+            <span class="tech-badge mono">WebAssembly</span>
+            <span class="tech-badge mono">React</span>
+            <span class="tech-badge mono">FPGA</span>
+            <span class="tech-badge mono">OpenQASM</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.cta-section {
+  position: relative;
+}
+
+.cta__wrapper {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4rem;
+  align-items: start;
+  position: relative;
+  background: rgba(14, 59, 140, 0.05);
+  border: 1px solid rgba(14, 59, 140, 0.2);
+  border-radius: 20px;
+  padding: 4rem;
+  overflow: hidden;
+}
+
+.cta__bg-mark {
+  position: absolute;
+  right: -5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 400px;
+  height: 400px;
+  pointer-events: none;
+}
+
+/* Content */
+.cta__content {
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
+}
+
+.cta__headline {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1.25rem;
+  margin-top: 0.75rem;
+}
+
+.cta__sub {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+/* Form */
+.cta__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.cta__form-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.875rem;
+}
+
+.cta__input {
+  width: 100%;
+  background: rgba(10, 13, 16, 0.8);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  color: var(--cream);
+  font-size: 0.875rem;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.cta__input::placeholder {
+  color: var(--muted-grey);
+}
+
+.cta__input:focus {
+  border-color: rgba(14, 59, 140, 0.5);
+  background: rgba(14, 59, 140, 0.05);
+  box-shadow: 0 0 0 3px rgba(14, 59, 140, 0.1);
+}
+
+.cta__select {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  color: var(--muted-grey);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239EA1A6' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.875rem center;
+  padding-right: 2.5rem;
+}
+
+.cta__select option {
+  background: #111B24;
+  color: var(--cream);
+}
+
+.cta__submit {
+  width: 100%;
+  justify-content: center;
+  padding: 0.9rem;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  gap: 0.5rem;
+}
+
+.cta__note {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--muted-grey);
+  margin-top: 0.25rem;
+}
+
+/* Success */
+.cta__success {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  background: rgba(14, 59, 140, 0.1);
+  border: 1px solid rgba(14, 59, 140, 0.25);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+.cta__success-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: rgba(14, 59, 140, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta__success h4 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.cta__success p {
+  font-size: 0.85rem;
+}
+
+/* Side */
+.cta__side {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 260px;
+}
+
+.cta__access-card {
+  background: rgba(10, 13, 16, 0.6);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.cta__access-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.cta__access-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.cta__access-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.83rem;
+  color: var(--muted-grey);
+}
+
+.cta__access-list li svg {
+  flex-shrink: 0;
+}
+
+/* Tech logos */
+.cta__trust {
+  background: rgba(10, 13, 16, 0.6);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+.cta__tech-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-badge {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  padding: 0.2rem 0.6rem;
+  background: rgba(14, 59, 140, 0.1);
+  border: 1px solid rgba(14, 59, 140, 0.2);
+  border-radius: 4px;
+  color: var(--muted-grey);
+}
+
+@media (max-width: 1000px) {
+  .cta__wrapper {
+    grid-template-columns: 1fr;
+    padding: 2.5rem;
+    gap: 2.5rem;
+  }
+  .cta__content { max-width: 100%; }
+  .cta__side { min-width: unset; }
+  .cta__access-list { grid-template-columns: 1fr 1fr; display: grid; }
+}
+
+@media (max-width: 640px) {
+  .cta__wrapper { padding: 1.75rem; }
+  .cta__form-group { grid-template-columns: 1fr; }
+  .cta__access-list { grid-template-columns: 1fr; }
+}
+</style>
+
+<script>
+  const form = document.getElementById('waitlistForm') as HTMLFormElement;
+  const successMsg = document.getElementById('successMsg');
+
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = (form.querySelector('[name="email"]') as HTMLInputElement)?.value;
+    if (!email || !email.includes('@')) {
+      const input = form.querySelector('[name="email"]') as HTMLInputElement;
+      input.style.borderColor = '#ff6b6b';
+      input.focus();
+      return;
+    }
+    // Simulate submit
+    form.style.display = 'none';
+    if (successMsg) successMsg.hidden = false;
+  });
+</script>
