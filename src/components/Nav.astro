@@ -1,0 +1,321 @@
+---
+---
+
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+
+    <!-- Logo -->
+    <a href="/" class="nav__logo" aria-label="Anvaya Home">
+      <div class="nav__logo-mark">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Letter A -->
+          <path
+            d="M18 4L28 28H22.5L18 16L13.5 28H8L18 4Z"
+            fill="#0E3B8C"
+          />
+          <path
+            d="M11 22H25"
+            stroke="#0E3B8C"
+            stroke-width="2.5"
+            stroke-linecap="round"
+          />
+          <!-- Interlocking loop left -->
+          <ellipse
+            cx="12"
+            cy="18"
+            rx="8"
+            ry="5"
+            stroke="#B4B9C1"
+            stroke-width="1.5"
+            fill="none"
+            transform="rotate(-20 12 18)"
+          />
+          <!-- Interlocking loop right -->
+          <ellipse
+            cx="24"
+            cy="18"
+            rx="8"
+            ry="5"
+            stroke="#B4B9C1"
+            stroke-width="1.5"
+            fill="none"
+            transform="rotate(20 24 18)"
+          />
+        </svg>
+      </div>
+      <div class="nav__logo-text">
+        <span class="nav__brand">ANVAYA</span>
+        <span class="nav__tagline">QUANTUM ORCHESTRATION</span>
+      </div>
+    </a>
+
+    <!-- Links -->
+    <ul class="nav__links" role="list">
+      <li><a href="#architecture" class="nav__link">Architecture</a></li>
+      <li><a href="#layers" class="nav__link">Platform</a></li>
+      <li><a href="#integration" class="nav__link">Integration</a></li>
+      <li><a href="#about" class="nav__link">About</a></li>
+    </ul>
+
+    <!-- CTA -->
+    <div class="nav__actions">
+      <a href="#waitlist" class="btn btn--ghost">Docs</a>
+      <a href="#waitlist" class="btn btn--primary">Request Access</a>
+    </div>
+
+    <!-- Mobile toggle -->
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="nav__mobile" id="navMobile">
+    <ul role="list">
+      <li><a href="#architecture" class="nav__link">Architecture</a></li>
+      <li><a href="#layers" class="nav__link">Platform</a></li>
+      <li><a href="#integration" class="nav__link">Integration</a></li>
+      <li><a href="#about" class="nav__link">About</a></li>
+    </ul>
+    <div class="nav__mobile-actions">
+      <a href="#waitlist" class="btn btn--ghost">Docs</a>
+      <a href="#waitlist" class="btn btn--primary">Request Access</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(10, 13, 16, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: background 0.3s ease;
+}
+
+.nav.scrolled {
+  background: rgba(10, 13, 16, 0.95);
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+  gap: 2rem;
+}
+
+/* Logo */
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nav__logo-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+}
+
+.nav__brand {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--cream);
+}
+
+.nav__tagline {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.45rem;
+  letter-spacing: 0.14em;
+  color: var(--muted-grey);
+  text-transform: uppercase;
+}
+
+/* Links */
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav__link {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--muted-grey);
+  letter-spacing: 0.02em;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--cobalt-light);
+  transition: width 0.25s ease;
+}
+
+.nav__link:hover {
+  color: var(--cream);
+}
+
+.nav__link:hover::after {
+  width: 100%;
+}
+
+/* Buttons */
+.nav__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn--ghost {
+  color: var(--silver);
+  border-color: var(--border-subtle);
+  background: transparent;
+}
+
+.btn--ghost:hover {
+  border-color: var(--silver);
+  color: var(--cream);
+  background: rgba(180, 185, 193, 0.05);
+}
+
+.btn--primary {
+  background: var(--cobalt);
+  color: var(--cream);
+  border-color: var(--cobalt);
+}
+
+.btn--primary:hover {
+  background: var(--cobalt-light);
+  border-color: var(--cobalt-light);
+  box-shadow: 0 0 24px var(--cobalt-glow);
+}
+
+/* Mobile toggle */
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav__toggle span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--silver);
+  border-radius: 1px;
+  transition: all 0.25s ease;
+}
+
+/* Mobile menu */
+.nav__mobile {
+  display: none;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border-subtle);
+  background: rgba(10, 13, 16, 0.98);
+}
+
+.nav__mobile ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.nav__mobile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.nav__mobile-actions .btn {
+  width: 100%;
+  justify-content: center;
+  padding: 0.75rem;
+}
+
+@media (max-width: 900px) {
+  .nav__links { display: none; }
+  .nav__actions { display: none; }
+  .nav__toggle { display: flex; }
+}
+
+@media (max-width: 900px) {
+  .nav__mobile.open { display: flex; }
+}
+</style>
+
+<script>
+  // Scroll effect
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      nav?.classList.add('scrolled');
+    } else {
+      nav?.classList.remove('scrolled');
+    }
+  });
+
+  // Mobile toggle
+  const toggle = document.getElementById('navToggle');
+  const mobileMenu = document.getElementById('navMobile');
+  toggle?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('open');
+  });
+
+  // Close on link click
+  mobileMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  });
+</script>
