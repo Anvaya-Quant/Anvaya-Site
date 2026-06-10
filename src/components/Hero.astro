@@ -86,19 +86,7 @@
         <span class="terminal__title mono">anvaya-core — circuit_builder.rs</span>
       </div>
       <div class="terminal__body">
-        <pre class="terminal__code"><code><span class="t-comment">// ANVAYA Core — Circuit Optimization Engine</span>
-<span class="t-keyword">use</span> anvaya_core::{Circuit, Gate, Optimizer};
-<span class="t-keyword">use</span> rayon::prelude::*;
-
-<span class="t-keyword">fn</span> <span class="t-fn">optimize_and_dispatch</span>(circuit: Circuit) {
-    <span class="t-keyword">let</span> optimized = circuit
-        .<span class="t-fn">gates</span>()
-        .<span class="t-fn">par_iter</span>()
-        .<span class="t-fn">filter</span>(|g| !g.<span class="t-fn">is_identity</span>())
-        .<span class="t-fn">collect</span>::&lt;Circuit&gt;();
-
-    Pulse::<span class="t-fn">dispatch</span>(optimized, Timing::Nanosecond(<span class="t-num">50</span>))
-}<span class="t-cursor"></span></code></pre>
+        <pre class="terminal__code"><code id="codeblock"></code></pre>
       </div>
     </div>
 
@@ -108,6 +96,27 @@
     <div class="hero__scroll-line"></div>
     <span class="mono scroll-label">SCROLL</span>
   </div>
+
+<script>
+  const code = [
+    '<span class="t-comment">// ANVAYA Core — Circuit Optimization Engine</span>',
+    '<span class="t-keyword">use</span> anvaya_core::{Circuit, Gate, Optimizer};',
+    '<span class="t-keyword">use</span> rayon::prelude::*;',
+    '',
+    '<span class="t-keyword">fn</span> <span class="t-fn">optimize_and_dispatch</span>(circuit: Circuit) {',
+    '    <span class="t-keyword">let</span> optimized = circuit',
+    '        .<span class="t-fn">gates</span>()',
+    '        .<span class="t-fn">par_iter</span>()',
+    '        .<span class="t-fn">filter</span>(|g| !g.<span class="t-fn">is_identity</span>())',
+    '        .<span class="t-fn">collect</span>::&lt;Circuit&gt;();',
+    '',
+    '    Pulse::<span class="t-fn">dispatch</span>(optimized, Timing::Nanosecond(<span class="t-num">50</span>))',
+    '}<span class="t-cursor"></span>',
+  ].join('\n');
+
+  const block = document.getElementById('codeblock');
+  if (block) block.innerHTML = code;
+</script>
 
 </section>
 
