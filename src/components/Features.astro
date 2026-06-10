@@ -1,0 +1,272 @@
+---
+const specs = [
+  {
+    category: "Studio",
+    color: "#1a52c4",
+    items: [
+      { label: "Circuit Editor", value: "Drag & Drop" },
+      { label: "State Visualization", value: "Bloch Sphere 3D" },
+      { label: "Amplitude Display", value: "Real-time" },
+      { label: "UI Framework", value: "React / Next.js" },
+      { label: "Language", value: "TypeScript" },
+      { label: "Theme", value: "Dark Mode Only" },
+    ]
+  },
+  {
+    category: "Core",
+    color: "#B4B9C1",
+    items: [
+      { label: "Runtime", value: "Rust + Wasm" },
+      { label: "Simulation Capacity", value: "20+ Qubits" },
+      { label: "Parallelism", value: "Rayon Multi-thread" },
+      { label: "Circuit Format", value: "OpenQASM 3.0" },
+      { label: "Optimization", value: "Gate Reduction" },
+      { label: "Deployment", value: "Browser-Native" },
+    ]
+  },
+  {
+    category: "Pulse",
+    color: "#0E3B8C",
+    items: [
+      { label: "Language", value: "Embedded Rust" },
+      { label: "Hardware Target", value: "FPGA Controllers" },
+      { label: "Timing Precision", value: "Nanosecond" },
+      { label: "QEC", value: "Real-time Loop" },
+      { label: "Latency", value: "< 1 μs" },
+      { label: "OS Dependency", value: "None (Bare Metal)" },
+    ]
+  }
+];
+---
+
+<section class="section features" id="about">
+  <div class="container">
+
+    <div class="section-label">Technical Specs</div>
+    <h2 style="margin-bottom: 1rem;">Engineered for<br/><span class="gradient-text">Uncompromising Performance</span></h2>
+    <p style="max-width: 580px; margin-bottom: 4rem; font-size: 1.05rem;">
+      Every technology choice in the Anvaya Hybrid Stack was made deliberately —
+      no compromises between developer experience and quantum performance.
+    </p>
+
+    <div class="features__grid">
+      {specs.map(spec => (
+        <div class="spec-card" style={`--card-color: ${spec.color}`}>
+          <div class="spec-card__header">
+            <div class="spec-card__dot" style={`background: ${spec.color}`}></div>
+            <h4 class="spec-card__category">ANVAYA {spec.category}</h4>
+          </div>
+          <div class="spec-card__list">
+            {spec.items.map(item => (
+              <div class="spec-item">
+                <span class="spec-item__label">{item.label}</span>
+                <span class="spec-item__value mono">{item.value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Horizontal divider stat row -->
+    <div class="features__stats-row">
+      <div class="feature-stat">
+        <div class="feature-stat__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="#1a52c4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="feature-stat__value mono">Zero-Cloud</div>
+          <div class="feature-stat__label">Local-first simulation — no vendor lock-in</div>
+        </div>
+      </div>
+      <div class="feature-stat">
+        <div class="feature-stat__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#B4B9C1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="feature-stat__value mono">Memory-Safe</div>
+          <div class="feature-stat__label">Rust guarantees at every layer of the stack</div>
+        </div>
+      </div>
+      <div class="feature-stat">
+        <div class="feature-stat__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" stroke="#0E3B8C" stroke-width="1.5"/>
+            <path d="M8 12l3 3 5-5" stroke="#1a52c4" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="feature-stat__value mono">Open Standards</div>
+          <div class="feature-stat__label">OpenQASM 3.0 interoperability built-in</div>
+        </div>
+      </div>
+      <div class="feature-stat">
+        <div class="feature-stat__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4" stroke="#1a52c4" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="12" cy="12" r="3" stroke="#B4B9C1" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div>
+          <div class="feature-stat__value mono">Hardware Agnostic</div>
+          <div class="feature-stat__label">Pulse layer targets multiple QPU backends</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.features {
+  position: relative;
+}
+
+/* Spec cards */
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.spec-card {
+  background: rgba(17, 27, 36, 0.7);
+  border: 1px solid var(--border-subtle);
+  border-top: 2px solid var(--card-color, var(--cobalt));
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: all 0.25s ease;
+}
+
+.spec-card:hover {
+  background: rgba(17, 27, 36, 0.9);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+
+.spec-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.spec-card__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.spec-card__category {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--cream);
+}
+
+.spec-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.spec-item__label {
+  font-size: 0.8rem;
+  color: var(--muted-grey);
+}
+
+.spec-item__value {
+  font-size: 0.75rem;
+  color: var(--cream);
+  letter-spacing: 0.04em;
+  text-align: right;
+}
+
+/* Stats row */
+.features__stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  background: rgba(17, 27, 36, 0.5);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.feature-stat {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-right: 1px solid var(--border-subtle);
+  transition: background 0.2s ease;
+}
+
+.feature-stat:last-child {
+  border-right: none;
+}
+
+.feature-stat:hover {
+  background: rgba(14, 59, 140, 0.06);
+}
+
+.feature-stat__icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(14, 59, 140, 0.1);
+  border: 1px solid var(--border-cobalt);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.feature-stat__value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.02em;
+}
+
+.feature-stat__label {
+  font-size: 0.75rem;
+  color: var(--muted-grey);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .features__grid {
+    grid-template-columns: 1fr;
+  }
+  .features__stats-row {
+    grid-template-columns: 1fr 1fr;
+  }
+  .feature-stat:nth-child(2) { border-right: none; }
+  .feature-stat:nth-child(3) { border-right: 1px solid var(--border-subtle); }
+}
+
+@media (max-width: 560px) {
+  .features__stats-row {
+    grid-template-columns: 1fr;
+  }
+  .feature-stat { border-right: none; border-bottom: 1px solid var(--border-subtle); }
+  .feature-stat:last-child { border-bottom: none; }
+}
+</style>
