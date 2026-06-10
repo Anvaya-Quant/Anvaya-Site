@@ -1,4 +1,4 @@
-import { defineConfig } from 'astro/integration-api';
+import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   output: 'static',
