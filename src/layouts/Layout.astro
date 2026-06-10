@@ -8,6 +8,9 @@ const {
   title = "ANVAYA — Quantum Orchestration & Dev Tools",
   description = "The integrated platform bridging bare-metal quantum control and high-level developer tooling. Build, simulate, and orchestrate quantum circuits at every layer of the stack."
 } = Astro.props;
+
+// Import CSS directly — Astro handles bundling
+import '../styles/global.css';
 ---
 
 <!DOCTYPE html>
@@ -22,7 +25,6 @@ const {
     <meta name="theme-color" content="#0A0D10" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
-    <link rel="stylesheet" href="/src/styles/global.css" />
   </head>
   <body>
     <slot />
