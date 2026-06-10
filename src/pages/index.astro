@@ -1,0 +1,61 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import Architecture from '../components/Architecture.astro';
+import Layers from '../components/Layers.astro';
+import Integration from '../components/Integration.astro';
+import Features from '../components/Features.astro';
+import CTA from '../components/CTA.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="ANVAYA — Quantum Orchestration & Dev Tools"
+  description="The first integrated quantum development stack. From visual circuit design in ANVAYA Studio through Rust-powered WASM simulation in ANVAYA Core to nanosecond bare-metal orchestration in ANVAYA Pulse."
+>
+  <Nav />
+  <main>
+    <Hero />
+    <Architecture />
+    <Layers />
+    <Integration />
+    <Features />
+    <CTA />
+  </main>
+  <Footer />
+</Layout>
+
+<style is:global>
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  // Intersection Observer for scroll reveals
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+  );
+
+  document.querySelectorAll('.section-label, .arch__layer, .layer-section, .flow-step, .spec-card, .layer-feature').forEach(el => {
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+</script>
