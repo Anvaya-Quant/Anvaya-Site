@@ -1,0 +1,294 @@
+---
+const layers = [
+  {
+    id: "studio",
+    number: "01",
+    product: "ANVAYA Studio",
+    headline: "Design Quantum Programs Visually",
+    description: "A professional-grade IDE that abstracts quantum complexity without hiding quantum power. Drag gates, inspect states, and iterate instantly — all in a dark, mathematically precise interface built for serious developers.",
+    color: "#1a52c4",
+    features: [
+      {
+        icon: `<path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>`,
+        title: "Drag-and-Drop Circuit Editor",
+        desc: "Build circuits visually with a palette of quantum gates. Arrange, connect, and reorder operations with pixel-precise control."
+      },
+      {
+        icon: `<circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.5"/><line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" stroke-width="1.5"/><ellipse cx="12" cy="12" rx="4" ry="8" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2"/>`,
+        title: "Live Bloch Sphere",
+        desc: "Watch qubit states evolve in 3D as you place each gate. The Bloch sphere updates in real-time — not just on run."
+      },
+      {
+        icon: `<rect x="2" y="3" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M7 10h10M12 7v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>`,
+        title: "Probability Amplitude Display",
+        desc: "Real-time histograms of computational basis state probabilities update as you edit the circuit."
+      },
+      {
+        icon: `<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>`,
+        title: "Dark IDE Aesthetic",
+        desc: "Charcoal base, cobalt accents, and precise geometric UI components matching the Anvaya brand language."
+      }
+    ]
+  },
+  {
+    id: "core",
+    number: "02",
+    product: "ANVAYA Core",
+    headline: "Compile Fast. Simulate Faster.",
+    description: "The synthesis layer that makes everything feel instant. Written in Rust, distributed as WebAssembly — Core runs in your browser, on your machine, at near-native speed. It is the link that makes the stack unified.",
+    color: "#B4B9C1",
+    features: [
+      {
+        icon: `<path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>`,
+        title: "Instant Circuit Optimization",
+        desc: "Translates visual circuits to OpenQASM or custom JSON, then reduces gate count in-place to maximize available coherence time."
+      },
+      {
+        icon: `<circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>`,
+        title: "Parallel Wasm Simulation",
+        desc: "Rayon-powered multi-threaded simulation of 20+ qubits directly in the browser or local runtime — no cloud required."
+      },
+      {
+        icon: `<rect x="2" y="3" width="20" height="18" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M7 8h10M7 12h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>`,
+        title: "OpenQASM Interop",
+        desc: "Export to industry-standard OpenQASM 3.0. Import existing circuits from any compliant quantum computing platform."
+      },
+      {
+        icon: `<path d="M20 7H4a2 2 0 00-2 2v9a2 2 0 002 2h16a2 2 0 002-2V9a2 2 0 00-2-2z" stroke="currentColor" stroke-width="1.5"/><path d="M16 3v4M8 3v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>`,
+        title: "Zero-Cloud Simulation",
+        desc: "Run full simulations on your developer machine before committing to expensive QPU time. Iterate locally, dispatch confidently."
+      }
+    ]
+  },
+  {
+    id: "pulse",
+    number: "03",
+    product: "ANVAYA Pulse",
+    headline: "Deterministic Control at Nanosecond Scale",
+    description: "This is where the software meets the physics. Pulse runs on FPGA-based controllers managing the real-time interaction between classical digital systems and quantum hardware — without a single microsecond of slack.",
+    color: "#0E3B8C",
+    features: [
+      {
+        icon: `<path d="M3 12h2l2-6 4 12 3-8 2 4h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>`,
+        title: "Pulse Sequence Generation",
+        desc: "Converts optimized abstract circuits into precise digital and analog microwave pulse sequences tuned for the physical hardware backend."
+      },
+      {
+        icon: `<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>`,
+        title: "Quantum Error Correction",
+        desc: "Real-time QEC loops: read raw measurement data, decode error syndromes, and apply corrections within microseconds — faster than qubit decoherence."
+      },
+      {
+        icon: `<circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>`,
+        title: "Nanosecond Timing",
+        desc: "Deterministic execution with nanosecond-level timing guarantees on FPGA-based real-time controllers. No OS jitter, no runtime overhead."
+      },
+      {
+        icon: `<rect x="2" y="7" width="20" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 3v4M8 3v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M8 12h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>`,
+        title: "FPGA Orchestration",
+        desc: "Pure embedded Rust on FPGA hardware gives Pulse zero-overhead execution. No garbage collection, no memory allocator — ever."
+      }
+    ]
+  }
+];
+---
+
+<section class="section layers" id="layers">
+  <div class="container">
+
+    <div class="section-label">The Platform</div>
+    <h2 style="margin-bottom: 1rem;">Three Layers.<br/><span class="gradient-text">One Seamless Platform.</span></h2>
+    <p style="max-width: 600px; margin-bottom: 5rem; font-size: 1.05rem;">
+      Each layer is engineered to be world-class on its own. Together, they form something
+      that has never existed before in the quantum computing ecosystem.
+    </p>
+
+    {layers.map((layer, i) => (
+      <div class={`layer-section layer-section--${layer.id} ${i % 2 === 1 ? 'layer-section--flip' : ''}`}>
+
+        <!-- Layer info panel -->
+        <div class="layer-section__info">
+          <div class="layer-section__number mono">{layer.number}</div>
+          <div class="layer-section__product">
+            <span class="layer-prefix">ANVAYA</span>
+            <span class="layer-name" style={`color: ${layer.color}`}>{layer.product.replace('ANVAYA ', '')}</span>
+          </div>
+          <h3 class="layer-section__headline">{layer.headline}</h3>
+          <p class="layer-section__desc">{layer.description}</p>
+          <a href="#waitlist" class="layer-section__link">
+            <span>Learn more</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Feature grid -->
+        <div class="layer-section__features">
+          {layer.features.map(feature => (
+            <div class="layer-feature">
+              <div class="layer-feature__icon" style={`border-color: ${layer.color}30; background: ${layer.color}10`}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style={`color: ${layer.color}`}>
+                  <Fragment set:html={feature.icon} />
+                </svg>
+              </div>
+              <div>
+                <h4 class="layer-feature__title">{feature.title}</h4>
+                <p class="layer-feature__desc">{feature.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+      </div>
+    ))}
+
+  </div>
+</section>
+
+<style>
+.layers {
+  position: relative;
+}
+
+/* Layer section */
+.layer-section {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 4rem;
+  align-items: start;
+  padding: 4rem 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.layer-section--flip {
+  grid-template-columns: 1.4fr 1fr;
+}
+
+.layer-section--flip .layer-section__info {
+  order: 2;
+}
+
+.layer-section--flip .layer-section__features {
+  order: 1;
+}
+
+/* Info */
+.layer-section__number {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  color: var(--cobalt-light);
+  margin-bottom: 0.75rem;
+}
+
+.layer-section__product {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.layer-prefix {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--muted-grey);
+}
+
+.layer-name {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.layer-section__headline {
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.layer-section__desc {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.layer-section__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--cobalt-light);
+  font-weight: 500;
+  transition: gap 0.2s ease;
+}
+
+.layer-section__link:hover {
+  gap: 0.75rem;
+}
+
+/* Feature grid */
+.layer-section__features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.layer-feature {
+  background: rgba(17, 27, 36, 0.6);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  transition: all 0.25s ease;
+}
+
+.layer-feature:hover {
+  border-color: rgba(14, 59, 140, 0.3);
+  background: rgba(14, 59, 140, 0.05);
+  transform: translateY(-2px);
+}
+
+.layer-feature__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.layer-feature__title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--cream);
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.01em;
+}
+
+.layer-feature__desc {
+  font-size: 0.8rem;
+  color: var(--muted-grey);
+  line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .layer-section,
+  .layer-section--flip {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .layer-section--flip .layer-section__info { order: 0; }
+  .layer-section--flip .layer-section__features { order: 0; }
+}
+
+@media (max-width: 560px) {
+  .layer-section__features {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
